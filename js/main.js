@@ -22,7 +22,12 @@ const projectDetails = [
     status: 'EN DESARROLLO',
     description: 'Proyecto académico individual de reconstrucción 3D e interacción WebGL, enfocado en recuperar y difundir la memoria de espacios históricos de entretenimiento urbano de Ciudad Juárez.',
     extra: 'Contempla la Plaza Monumental, el Hipódromo y Galgódromo y el Centro Deportivo Neri Santos. Está dirigido a estudiantes universitarios e incluye investigación y documentación fotográfica de campo. La experiencia interactiva se encuentra en desarrollo.',
-    tags: ['Blender', 'Unity', 'WebGL', 'Modelado 3D']
+    tags: ['Blender', 'Unity', 'WebGL', 'Modelado 3D'],
+    gallery: [
+      {src:'assets/img/proyectos/memoria-juarez/plaza-monumental.png',alt:'Comparación antes y ahora de la Plaza Monumental',caption:'Plaza Monumental: contraste entre el antiguo recinto y el monumento que permanece en el entorno urbano.'},
+      {src:'assets/img/proyectos/memoria-juarez/neri-santos.png',alt:'Comparación antes y ahora del Centro Deportivo Neri Santos',caption:'Centro Deportivo Neri Santos: cambios visibles en el exterior y en su entorno urbano.'},
+      {src:'assets/img/proyectos/memoria-juarez/hipodromo-galgodromo.png',alt:'Comparación antes y ahora del Hipódromo y Galgódromo',caption:'Hipódromo y Galgódromo: comparación de la apariencia anterior y las condiciones actuales de las instalaciones.'}
+    ]
   },
   {
     title: 'Horror Beneath the Earth: Border Disaster',
@@ -53,6 +58,29 @@ const projectDetails = [
 const projectDialog = document.getElementById('project-dialog');
 const closeProjectButton = projectDialog?.querySelector('.dialog-close');
 let previousProjectTrigger = null;
+let activeGallery = [];
+let activeGalleryIndex = 0;
+const galleryElement = document.getElementById('dialog-gallery');
+const galleryImage = document.getElementById('dialog-gallery-image');
+const galleryCaption = document.getElementById('gallery-caption');
+const galleryCounter = document.getElementById('gallery-counter');
+const visualPlaceholder = document.getElementById('dialog-visual-placeholder');
+function renderGallery() {
+  if (!activeGallery.length) return;
+  const item = activeGallery[activeGalleryIndex];
+  galleryImage.src = item.src;
+  galleryImage.alt = item.alt;
+  galleryCaption.textContent = item.caption;
+  galleryCounter.textContent = `${activeGalleryIndex + 1} / ${activeGallery.length}`;
+}
+document.getElementById('gallery-prev')?.addEventListener('click', () => {
+  activeGalleryIndex = (activeGalleryIndex - 1 + activeGallery.length) % activeGallery.length;
+  renderGallery();
+});
+document.getElementById('gallery-next')?.addEventListener('click', () => {
+  activeGalleryIndex = (activeGalleryIndex + 1) % activeGallery.length;
+  renderGallery();
+});
 
 function openProjectDetails(index, trigger) {
   const project = projectDetails[index];
@@ -70,6 +98,11 @@ function openProjectDetails(index, trigger) {
     span.textContent = tag;
     tagsContainer.appendChild(span);
   });
+  activeGallery = project.gallery || [];
+  activeGalleryIndex = 0;
+  galleryElement.hidden = activeGallery.length === 0;
+  visualPlaceholder.hidden = activeGallery.length > 0;
+  if (activeGallery.length) renderGallery();
   projectDialog.showModal();
   closeProjectButton?.focus();
 }
@@ -85,4 +118,3 @@ projectDialog?.addEventListener('click', event => {
   if (event.target === projectDialog) projectDialog.close();
 });
 projectDialog?.addEventListener('close', () => previousProjectTrigger?.focus());
-

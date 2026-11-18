@@ -240,14 +240,7 @@
      <div class="project-grid">
       <!-- PROYECTO 01: Memoria lúdica de Ciudad Juárez -->
       <article class="project-card reveal" data-category="interactivo">
-       <div class="project-art art-city">
-        <span class="art-symbol">
-         ▧
-        </span>
-        <span>
-         CIUDAD JUÁREZ · WEBGL
-        </span>
-       </div>
+       <div class="project-art art-city project-art-photo"><img src="assets/img/proyectos/memoria-juarez/plaza-monumental.png" alt="Comparación histórica y actual de la Plaza Monumental de Ciudad Juárez" loading="lazy"/></div>
        <div class="project-meta">
         <span>
          01 / ENTORNO 3D
@@ -394,7 +387,7 @@
        </article>
      </div>
      <p class="placeholder-note">
-      Las imágenes actuales son composiciones gráficas provisionales. Las sustituiremos por capturas y renders originales de cada proyecto.
+      El proyecto Memoria lúdica incluye comparaciones históricas y actuales. Los demás proyectos incorporarán más imágenes conforme avance su documentación.
      </p>
     </div>
    </section>
@@ -617,6 +610,44 @@
     </div>
    </section>
    <!-- ========== FIN 05 / CONTACTO Y REDES SOCIALES ========== -->
+
+   <!-- ========== VENTANA EMERGENTE / DETALLES DE PROYECTOS ========== -->
+   <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+     <div class="dialog-top">
+      <span class="dialog-kicker" id="dialog-type">PROYECTO CAP</span>
+      <button type="button" class="dialog-close" aria-label="Cerrar detalles">✕</button>
+     </div>
+     <div class="dialog-content">
+      <div class="dialog-media">
+       <div id="dialog-gallery" class="dialog-gallery" hidden>
+        <img id="dialog-gallery-image" alt="" src="" />
+        <div class="gallery-toolbar">
+         <button id="gallery-prev" type="button" aria-label="Imagen anterior">← Anterior</button>
+         <span id="gallery-counter" aria-live="polite">1 / 3</span>
+         <button id="gallery-next" type="button" aria-label="Imagen siguiente">Siguiente →</button>
+        </div>
+        <p id="gallery-caption" class="gallery-caption"></p>
+       </div>
+       <div id="dialog-visual-placeholder" class="dialog-visual">
+        <span aria-hidden="true">✦</span>
+        <p>CREATIVE ARTS &amp; PLAY</p>
+        <small>Próximamente: imágenes y avances del proyecto.</small>
+       </div>
+      </div>
+      <div class="dialog-info">
+       <span class="dialog-status" id="dialog-status"></span>
+       <h2 id="dialog-title"></h2>
+       <p id="dialog-description"></p>
+       <h3>Acerca del proyecto</h3>
+       <p id="dialog-extra"></p>
+       <h3>Herramientas y disciplinas</h3>
+       <div class="tags" id="dialog-tags"></div>
+      </div>
+     </div>
+    </div>
+   </dialog>
+   <!-- ========== FIN / DETALLES DE PROYECTOS ========== -->
   </main>
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer class="footer">
