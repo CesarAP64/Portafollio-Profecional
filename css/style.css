@@ -24,66 +24,174 @@
 ===================================== */
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
-    margin-top: 35px;
+    max-width: 900px;
+    margin: 35px auto 0;
 }
 
-.social-links .social-button {
-    display: inline-flex;
+.social-links .social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-
-    min-width: 170px;
-    padding: 15px 25px;
-
-    background-color: #FC6C85;
-    color: #2E2E2E;
-
-    border: 2px solid #FC6C85;
-    border-radius: 6px;
-
+    gap: 12px;
+    min-width: 0;
+    padding: 25px;
+    border-radius: 12px;
+    background: #fffafd;
+    border: 2px solid #f4b8cb;
+    color: #2e2e2e;
+    text-align: left;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-
-    transition:
-        transform 0.3s ease,
-        background-color 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
 }
 
-.social-links .social-button:hover {
-    background-color: #ffffff;
-    color: #2E2E2E;
+.social-links a.social-card:hover {
     transform: translateY(-5px);
-
-    box-shadow: 0 8px 20px rgba(252, 108, 133, 0.3);
+    border-color: #fc6c85;
+    box-shadow: 0 10px 25px rgba(252,108,133,.2);
 }
 
-.social-links .social-button:focus-visible {
-    outline: 3px solid #2E2E2E;
-    outline-offset: 4px;
+.social-logo {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: 55px;
+    object-fit: contain;
+    object-position: left center;
 }
 
-@media (max-width: 600px) {
+.social-card span {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.social-card small,
+.social-card > a {
+    color: #b83e64;
+    font-weight: 700;
+}
+
+.social-card .copy-email {
+    background: #2e2e2e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.social-card:focus-visible,
+.social-card a:focus-visible,
+.copy-email:focus-visible {
+    outline: 3px solid #b83e64;
+    outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
     .social-links {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .social-links .social-button {
-        width: 100%;
-        max-width: 300px;
+        grid-template-columns: 1fr;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .social-links .social-button {
+    .social-links .social-card {
         transition: none;
+    }
+}
+
+
+
+/* =====================================
+   AJUSTES - SECCIÓN SOBRE MÍ
+===================================== */
+
+.about .cv-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 22px;
+
+    background: #fc6c85;
+    color: #2e2e2e;
+
+    border: 2px solid #fc6c85;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Botón secundario */
+.about .cv-download {
+    background: transparent;
+}
+
+/* Animación al pasar el cursor */
+.about .cv-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(252,108,133,0.25);
+}
+
+/* Accesibilidad con teclado */
+.about .cv-button:focus-visible {
+    outline: 3px solid #2e2e2e;
+    outline-offset: 4px;
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+    .about .cv-button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about .cv-button {
+        transition: none;
+    }
+}
+
+.content-section {
+    padding: 110px 5vw;
+}
+
+
+/* Espaciado específico de Sobre mí */
+
+.about.content-section {
+    padding-top: 85px;
+    padding-bottom: 65px;
+}
+
+.about .split {
+    margin-top: 50px;
+}
+
+.about .section-shell {
+    padding-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .about.content-section {
+        padding-top: 65px;
+        padding-bottom: 55px;
+    }
+
+    .about .split {
+        margin-top: 35px;
     }
 }
