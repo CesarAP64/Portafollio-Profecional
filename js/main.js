@@ -1,0 +1,10 @@
+const navToggle=document.querySelector('.nav-toggle');
+const topNav=document.querySelector('.topnav');
+navToggle?.addEventListener('click',()=>{const open=topNav.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(open));navToggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');});
+document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{topNav?.classList.remove('open');navToggle?.setAttribute('aria-expanded','false');navToggle?.setAttribute('aria-label','Abrir menú');}));
+window.addEventListener('scroll',()=>document.querySelector('.topbar')?.classList.toggle('scrolled',window.scrollY>30),{passive:true});
+const observer=('IntersectionObserver' in window)?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.08}):null;
+document.querySelectorAll('.reveal').forEach(el=>observer?observer.observe(el):el.classList.add('visible'));
+const filters=document.querySelectorAll('.filter');const cards=document.querySelectorAll('.project-card');
+filters.forEach(btn=>btn.addEventListener('click',()=>{const cat=btn.dataset.filter;filters.forEach(f=>{const active=f===btn;f.classList.toggle('active',active);f.setAttribute('aria-pressed',String(active));});cards.forEach(card=>card.hidden=cat!=='todos'&&card.dataset.category!==cat);}));
+document.getElementById('year').textContent=new Date().getFullYear();
