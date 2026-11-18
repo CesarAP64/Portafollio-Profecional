@@ -195,3 +195,85 @@
         margin-top: 35px;
     }
 }
+
+
+/* ==========================================================
+   CAP / MEJORAS DEL INICIO: LOGOTIPO, BOTÓN Y DECORACIÓN
+   ========================================================== */
+.brand-logo {
+  display:block;
+  width:48px;
+  height:42px;
+  object-fit:contain;
+  flex-shrink:0;
+  transition:transform .3s ease;
+}
+.brand:hover .brand-logo {transform:scale(1.08) rotate(-5deg)}
+/* Separa el enlace inferior del botón central CONTACTO. */
+.hero-bottom {margin-top:28px; padding-top:18px; padding-bottom:8px}
+.hero-bottom a {transition:background .25s ease,transform .25s ease,box-shadow .25s ease}
+.hero-bottom a:hover {transform:translateY(-4px);box-shadow:0 8px 18px #a72d5733}
+/* Desplazamiento muy suave de las retículas laterales. */
+.room-left {animation:room-left-drift 12s ease-in-out infinite alternate}
+.room-right {animation:room-right-drift 14s ease-in-out infinite alternate}
+@keyframes room-left-drift {
+  from {background-position:0 0;opacity:.62}
+  to {background-position:16px 12px;opacity:.92}
+}
+@keyframes room-right-drift {
+  from {background-position:0 0;opacity:.62}
+  to {background-position:-16px 12px;opacity:.92}
+}
+@media(min-width:601px) {
+  .dashboard {height:415px}
+  .hero-bottom {margin-top:40px}
+}
+@media(max-width:600px) {
+  .brand-logo {width:42px;height:37px}
+  .hero-bottom {margin-top:35px;padding-top:12px}
+}
+
+/* ==========================================================
+   CAP / VENTANA EMERGENTE DE PROYECTOS
+   ========================================================== */
+.project-details-btn {
+  display:inline-flex;align-items:center;gap:12px;
+  margin-top:22px;padding:12px 18px;
+  background:var(--ink);color:white;border:0;border-radius:5px;
+  font-size:11px;font-weight:800;letter-spacing:.08em;cursor:pointer;
+  transition:transform .2s ease,background .2s ease;
+}
+.project-details-btn:hover {background:#b83e64;transform:translateY(-3px)}
+.project-dialog {
+  width:min(960px,calc(100% - 32px));max-height:min(88vh,850px);
+  padding:0;border:2px solid #f5b4cc;border-radius:16px;
+  background:#fffafc;color:var(--ink);box-shadow:0 24px 70px #1c101c66;
+  overflow:auto;
+}
+.project-dialog::backdrop {background:rgba(25,18,27,.72);backdrop-filter:blur(5px)}
+.project-dialog[open] {animation:dialog-enter .24s ease-out}
+@keyframes dialog-enter {from {opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.dialog-inner {padding:clamp(18px,3vw,32px)}
+.dialog-top {display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:20px}
+.dialog-kicker {font-size:11px;font-weight:800;letter-spacing:.16em;color:#ad5978}
+.dialog-close {display:grid;place-items:center;width:42px;height:42px;border:1px solid #e8bfd0;border-radius:50%;background:white;cursor:pointer;font-size:18px}
+.dialog-close:hover {background:var(--pink)}
+.dialog-content {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(22px,4vw,45px)}
+.dialog-visual {min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;background:linear-gradient(145deg,#49364d,#a96b8a);color:white;border-radius:10px}
+.dialog-visual>span {font-size:100px;line-height:1}
+.dialog-visual p {font:800 19px 'Barlow Condensed',sans-serif;letter-spacing:.1em;margin:0}
+.dialog-visual small {max-width:230px;font-size:12px;line-height:1.6;opacity:.88}
+.dialog-info h2 {font-size:clamp(35px,4vw,58px);margin:10px 0 14px}
+.dialog-info h3 {font-size:24px;margin:22px 0 8px}
+.dialog-info p {line-height:1.75;color:#5c555c;font-size:14px}
+.dialog-info .dialog-status {display:inline-block;margin:0 0 10px;padding:5px 10px;border:1px solid #f0b4ca;border-radius:20px;font-size:11px;font-weight:800;color:#a72d57}
+.dialog-info .tags {margin-top:12px}
+@media(max-width:650px) {
+  .dialog-content {grid-template-columns:1fr}
+  .dialog-visual {min-height:200px}
+  .dialog-visual>span {font-size:60px}
+  .project-dialog {max-height:92vh}
+}
+@media(prefers-reduced-motion:reduce) {
+  .room-left,.room-right,.project-dialog[open] {animation:none}
+}
