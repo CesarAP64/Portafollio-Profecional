@@ -36,6 +36,7 @@ const projectDetails = [
     description: 'Videojuego de terror y supervivencia desarrollado como proyecto académico. La experiencia propone escapar de una amenaza subterránea mediante la exploración de escenarios estilizados de estética low poly.',
     extra: 'El primer nivel transcurre en una vivienda con patio: el jugador debe desplazarse sin tocar el suelo, activar un generador y alcanzar una plataforma de helicóptero. El segundo nivel se sitúa en una granja, donde se plantea buscar piezas de un vehículo; su escenario incluye granero, cercas, gallinero y maquinaria agrícola. El tercer nivel se desarrolla en una cueva de montaña, con rutas abiertas, bloqueadas y secretas. Los escenarios y modelos se trabajan en Blender y la implementación del videojuego en Unity. El proyecto sigue en desarrollo; las mecánicas y los niveles no se presentan como finalizados.',
     tags: ['Unity', 'Blender', 'Low poly', 'Diseño de niveles', 'Terror', 'Supervivencia'],
+    demoUrl: 'https://nightol.itch.io/terror-bajo-tierra-demo',
     gallery: [
       {src:'assets/img/proyectos/border-disaster/nivel-1.png',alt:'Nivel 1 del juego: horror beneath the earth border disaster. Escenario de la vivienda',caption:'Nivel 1: vivienda y patio. Nivel inspirado en las zonas rurales de CD. Juárez.'},
       {src:'assets/img/proyectos/border-disaster/nivel-2.png',alt:'Nivel 2 del juego: horror beneath the earth border disaster. Escenario de la granja',caption:'Nivel 2: granja y sus instalaciones. Nivel inspirado en las Granjas y ranchos.'},
@@ -47,16 +48,55 @@ const projectDetails = [
     ]
   },
   {
-    title: 'Cleanup Crew',
+    title: 'Echoes of Tiamat RA: Crónicas del Umbral',
     type: '03 / VIDEOJUEGO',
     status: 'PROYECTO ACADÉMICO',
-    description: 'Rail shooter protagonizado por integrantes de un escuadrón que enfrenta basura viviente para proteger a la comunidad.',
-    extra: 'Propuesta de videojuego de acción con temática ambiental, diseño de personajes y enemigos y mecánicas de disparos sobre rieles.',
-    tags: ['Diseño de videojuegos', 'Rail shooter'],
+
+    description:
+      'Videojuego académico para Android de fantasía y misterio, ' +
+      'que combina narrativa interactiva, investigación y ' +
+      'elementos de realidad aumentada.',
+
+    extra:
+      'El jugador interpreta a un investigador que descubre ' +
+      'anomalías relacionadas con Tiamat, la Reina de los Dragones. ' +
+      'La propuesta contempla exploración, pistas, criaturas ' +
+      'fantásticas y elementos interactivos. ' +
+      'Mi participación se enfocó en el diseño y la narrativa ' +
+      'del videojuego, colaborando en la construcción de su ' +
+      'universo y sus recursos visuales.',
+
+    tags: [
+      'Android',
+      'Android Studio',
+      'Kotlin',
+      'Diseño de videojuegos',
+      'Narrativa interactiva',
+      'Realidad aumentada'
+    ],
+
+    videoUrl: 'https://www.youtube.com/embed/V73By_R4Q2A',
     gallery: [
-      {src:'assets/img/proyectos/memoria-juarez/plaza-monumental.png',alt:'Comparación antes y ahora de la Plaza Monumental',caption:'Plaza Monumental: contraste entre el antiguo recinto y el monumento que permanece en el entorno urbano.'},
-      {src:'assets/img/proyectos/memoria-juarez/neri-santos.png',alt:'Comparación antes y ahora del Centro Deportivo Neri Santos',caption:'Centro Deportivo Neri Santos: cambios visibles en el exterior y en su entorno urbano.'},
-      {src:'assets/img/proyectos/memoria-juarez/hipodromo-galgodromo.png',alt:'Comparación antes y ahora del Hipódromo y Galgódromo',caption:'Hipódromo y Galgódromo: comparación de la apariencia anterior y las condiciones actuales de las instalaciones.'}
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-1.svg',alt:'Portada de Echoes of Tiamat RA.',caption:'Presentación del videojuego Echoes of Tiamat RA.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-2.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-3.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-4.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-5.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-6.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-7.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-8.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-9.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-10.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-11.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-12.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-13.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-14.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-15.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-16.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-17.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-18.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'},
+      {src:'assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-19.svg',alt:'mmmmmmmmmmm',caption:'mmmmmmm.'}
+      
     ]
   },
   {
@@ -110,6 +150,57 @@ function openProjectDetails(index, trigger) {
   document.getElementById('dialog-status').textContent = project.status;
   document.getElementById('dialog-description').textContent = project.description;
   document.getElementById('dialog-extra').textContent = project.extra;
+
+
+// ======================================================
+// VIDEO DEL PROYECTO
+// ======================================================
+const videoContainer = document.getElementById(
+  'dialog-video-container'
+);
+
+const videoFrame = document.getElementById(
+  'dialog-video-frame'
+);
+
+if (videoContainer && videoFrame) {
+
+  // Limpiar el video del proyecto anterior
+  videoFrame.replaceChildren();
+
+  const hasVideo = Boolean(project.videoUrl);
+  videoContainer.hidden = !hasVideo;
+
+  if (hasVideo) {
+    const iframe = document.createElement('iframe');
+
+    iframe.src = project.videoUrl;
+    iframe.title = 'Video de ' + project.title;
+    iframe.loading = 'lazy';
+    iframe.allow =
+      'accelerometer; autoplay; clipboard-write; ' +
+      'encrypted-media; gyroscope; picture-in-picture; ' +
+      'web-share';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+
+    videoFrame.appendChild(iframe);
+  }
+}
+
+  const demoContainer = document.getElementById('dialog-demo-container');
+const demoLink = document.getElementById('dialog-demo-link');
+if (demoContainer && demoLink) {
+    const hasDemo = Boolean(project.demoUrl);
+
+    demoContainer.hidden = !hasDemo;
+
+    if (hasDemo) {
+        demoLink.href = project.demoUrl;
+    } else {
+        demoLink.removeAttribute('href');
+    }
+}
   const tagsContainer = document.getElementById('dialog-tags');
   tagsContainer.replaceChildren();
   project.tags.forEach(tag => {
@@ -136,4 +227,15 @@ closeProjectButton?.addEventListener('click', () => projectDialog.close());
 projectDialog?.addEventListener('click', event => {
   if (event.target === projectDialog) projectDialog.close();
 });
-projectDialog?.addEventListener('close', () => previousProjectTrigger?.focus());
+
+projectDialog?.addEventListener('close', () => {
+
+  // Detener el video al cerrar los detalles
+  document.getElementById('dialog-video-frame')
+    ?.replaceChildren();
+
+  // Regresar el enfoque al botón original
+  previousProjectTrigger?.focus();
+
+});
+

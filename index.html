@@ -311,43 +311,42 @@
          VER DETALLES <span aria-hidden="true">↗</span>
         </button>
        </article>
-      <!-- PROYECTO 03: Cleanup Crew -->
-      <article class="project-card reveal" data-category="videojuegos">
-       <div class="project-art art-clean">
-        <span class="art-symbol">
-         ✳
-        </span>
-        <span>
-         E.B.V. / CLEANUP CREW
-        </span>
-       </div>
-       <div class="project-meta">
-        <span>
-         03 / VIDEOJUEGO
-        </span>
-        <span>
-         PROYECTO ACADÉMICO
-        </span>
-       </div>
-       <h3>
-        Cleanup Crew
-       </h3>
-       <p>
-        Rail shooter protagonizado por un escuadrón que enfrenta basura viviente para proteger a la comunidad.
-       </p>
-       <div class="tags">
-        <span>
-         Game design
-        </span>
-        <span>
-         Rail shooter
-        </span>
-       </div>
       
-        <button class="project-details-btn" type="button" data-project="2" aria-haspopup="dialog">
+<!-- PROYECTO 03: Echoes of Tiamat RA -->
+<article class="project-card reveal" data-category="videojuegos">
+
+  <div class="project-art art-tiamat">
+    <img
+      src="assets/img/proyectos/echoe-of-tiamat-ra/echoe-of-tiamat-ra-0.svg"
+      alt="Portada de Echoes of Tiamat RA"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="project-meta">
+    <span>03 / VIDEOJUEGO</span>
+    <span>PROYECTO ACADÉMICO</span>
+  </div>
+
+  <h3>Echoes of Tiamat RA</h3>
+
+  <p>
+    Videojuego para Android de fantasía y misterio
+    que combina narrativa, exploración y realidad aumentada.
+  </p>
+
+  <div class="tags">
+    <span>Android</span>
+    <span>Diseño de videojuegos</span>
+    <span>Narrativa</span>
+    <span>Realidad aumentada</span>
+  </div>
+
+  <button class="project-details-btn" type="button" data-project="2" aria-haspopup="dialog">
          VER DETALLES <span aria-hidden="true">↗</span>
         </button>
-       </article>
+</article>
+
       <!-- PROYECTO 04: UNO Galaxy -->
       <article class="project-card reveal" data-category="grafico">
        <div class="project-art art-uno">
@@ -641,6 +640,24 @@
        <p id="dialog-description"></p>
        <h3>Acerca del proyecto</h3>
        <p id="dialog-extra"></p>
+       <!-- Enlace a la demo del proyecto -->
+      <div id="dialog-demo-container" hidden>
+          <a
+              id="dialog-demo-link"
+              class="demo-button"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+              JUGAR DEMO VR ↗
+          </a>
+      </div>
+      <!-- VIDEO DEL PROYECTO -->
+        <div id="dialog-video-container" class="dialog-video-container" hidden>
+          <h3>Video del proyecto</h3>
+
+          <div id="dialog-video-frame" class="dialog-video-frame"></div>
+        </div>
        <h3>Herramientas y disciplinas</h3>
        <div class="tags" id="dialog-tags"></div>
       </div>
