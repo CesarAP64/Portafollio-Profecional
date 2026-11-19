@@ -359,3 +359,191 @@ projectDialog?.addEventListener('close', () => {
 
 });
 
+
+
+// ==========================================================
+// CAP / 03 - CARRUSEL DE EVIDENCIAS DE PRÁCTICAS PROFESIONALES
+// Sustituye los nombres de archivo por los que tengas en assets/img.
+// ==========================================================
+const experiencePhotos = [
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (1).png',
+    alt: 'Registro fotográfico durante una visita a la comunidad',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (2).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (3).png',
+    alt: 'Preparación de material visual para el reel comunitario',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (4).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (5).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (6).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (7).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (8).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (9).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (10).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (11).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (12).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (13).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (14).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (15).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (16).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (17).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (18).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (19).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+    {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (20).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (21).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (22).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (23).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (24).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (25).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (26).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (27).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },{
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (28).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (29).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  },{
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (30).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Visita a la comunidad y registro fotográfico para el material audiovisual.'
+  },{
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (31).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Documentación de las actividades realizadas con la comunidad.'
+  },
+  {
+    src: 'assets/img/proyectos/colectiva-arte-comunidad-y-equidad/colectiva-arte- (32).png',
+    alt: 'Actividades comunitarias documentadas durante las prácticas',
+    caption: 'Selección de fotografías y videos para la producción del reel.'
+  }
+];
+
+const experienceImage = document.getElementById('experience-carousel-image');
+const experienceCaption = document.getElementById('experience-carousel-caption');
+const experienceCounter = document.getElementById('experience-counter');
+let experienceIndex = 0;
+
+function renderExperiencePhoto() {
+  if (!experienceImage || !experiencePhotos.length) return;
+  const photo = experiencePhotos[experienceIndex];
+  experienceImage.src = photo.src;
+  experienceImage.alt = photo.alt;
+  if (experienceCaption) experienceCaption.textContent = photo.caption;
+  if (experienceCounter) {
+    experienceCounter.textContent = `${experienceIndex + 1} / ${experiencePhotos.length}`;
+  }
+}
+
+function moveExperiencePhoto(step) {
+  experienceIndex = (experienceIndex + step + experiencePhotos.length) % experiencePhotos.length;
+  renderExperiencePhoto();
+}
+
+document.getElementById('experience-prev')?.addEventListener('click', () => moveExperiencePhoto(-1));
+document.getElementById('experience-next')?.addEventListener('click', () => moveExperiencePhoto(1));
+renderExperiencePhoto();
